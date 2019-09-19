@@ -1,1 +1,10 @@
-on: [issue]
+on: [issues]
+jobs:
+  comment:
+    name: add a comment
+    steps:
+      - uses: "actions/github@v1.0.0"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: "comment \"Hello World\" --action=opened"
