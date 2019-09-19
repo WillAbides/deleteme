@@ -1,9 +1,15 @@
 on: [push]
 jobs:
   run:
-    name: Run Tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/hello-world-docker-action@master
       with:
         who-to-greet: 'Mona the Octocat'
+    - uses: vsoch/pull-request-action@master
+      name: create branch
+      env:
+        BRANCH_PREFIX: update/
+        PULL_REQUEST_BRANCH: master
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     
