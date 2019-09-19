@@ -5,4 +5,4 @@ jobs:
     name: bar
     runs-on: ubuntu-latest
     steps:
-      - run: ls
+      - run: echo hello world
