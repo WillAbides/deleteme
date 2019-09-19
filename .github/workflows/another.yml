@@ -7,6 +7,6 @@ jobs:
     steps:
       - run: wget https://github.com/octo-cli/octo-cli/releases/download/v0.1.0/octo-cli_0.1.0_Linux_x86_64.tar.gz
       - run: tar -xzf octo-cli_0.1.0_Linux_x86_64.tar.gz
-      - run: ./octo codes-of-conduct list-conduct-codes --scarlet-witch-preview
+      - run: ./octo pulls list-files --owner=WillAbides --repo=deleteme --number=2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
