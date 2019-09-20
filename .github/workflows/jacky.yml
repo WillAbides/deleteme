@@ -5,4 +5,4 @@ jobs:
     name: jacky
     runs-on: ubuntu-18.04
     steps:
-      - uses: WillAbides/jackson@master
+      - uses: WillAbides/jackson/doodle@master
