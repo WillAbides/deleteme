@@ -1,1 +1,8 @@
-
+name: jacky
+on: [push, pull_request, issues, issue_comment]
+jobs:
+  jacky:
+    name: jacky
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: WillAbides/jackson@master
