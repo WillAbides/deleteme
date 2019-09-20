@@ -1,0 +1,11 @@
+name: octo-cli comment
+on: [issues]
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: wget https://github.com/octo-cli/octo-cli/releases/download/v0.1.0/octo-cli_0.1.0_Linux_x86_64.tar.gz
+      - run: tar -xzf octo-cli_0.1.0_Linux_x86_64.tar.gz
+      - run: ./octo issues create-comment --owner=WillAbides --repo=deleteme --number=${{github.event.issue.number}} --body="hello from octo-cli"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
