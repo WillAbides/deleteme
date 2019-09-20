@@ -9,3 +9,6 @@ jobs:
       - run: ./octo issues create-comment --owner=WillAbides --repo=deleteme --number=${{github.event.issue.number}} --body="hello from octo-cli"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: ./octo issues create-comment --owner=WillAbides --repo=deleteme --number=${{github.event.issue.number}} --body="hello again from octo-cli"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
