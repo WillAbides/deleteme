@@ -10,3 +10,8 @@ jobs:
           github-token: ${{github.token}}
           script: |
             github.issues.createComment({...context.issue, body: '👋 Thanks for reporting!'})
+      - uses: actions/github-script@0.2.0
+        with:
+          github-token: ${{github.token}}
+          script: |
+            github.issues.createComment({...context.issue, body: '👋 Thanks again for reporting!'})
